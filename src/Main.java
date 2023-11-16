@@ -78,6 +78,44 @@ public class Main {
             }
             System.out.println();
         }
+
+        //Задача с *  прошлое дз
+
+        int[] array = {9, 9, 9};
+
+        // перевести array в число w
+         w+1
+         w вернуть в массив с индексом +1
+
+        System.out.print(array[i] + " ");
+
+
+
+
+        int k = array.length;
+        int index = k - 1;
+        // Пока текущий элемент равен 9 и индекс не станет отрицательным,
+        // уменьшаем индекс и обнуляем текущий элемент
+        while (index >= 0 && array[index] == 9) {
+            array[index] = 0;
+            index--;
+        }
+        // Если индекс отрицателен, значит все элементы были равны 9,
+        // и нужно увеличить размер массива
+        if (index < 0) {
+            int[] newArray = new int[k + 1];
+            newArray[0] = 1;
+            for (int i = 0; i < newArray.length; i++) {
+                System.out.print(newArray[i] + " ");
+            }
+        } else {
+            // Иначе просто увеличиваем текущий элемент на 1
+            array[index]++;
+            for (int i = 0; i < array.length; i++) {
+                System.out.print(array[i] + " ");
+            }
+        }
+
     }
 
 }
